@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				display:flex;
+				/* flex-direction:column;
+				flex-wrap:wrap; */
+				flex-flow:row nowrap;
+				/* justify-content:space-around; */
+				align-items:center; 
+				/* align-content:space-between; */
+				width:500px;
+				height:300px;
+				border:1px solid #000;
+				margin:100px auto;
+			}
+			.small{
+				/* float:left; */
+				width:100px;
+				height:100px;
+				/* margin:0 20px; */
+				box-shadow:0 0 10px #000 inset;
+				font-size:30px;
+			}
+			.a{
+				/* font-size:50px; */
+				/* order:3; */
+				/* flex-shrink:2; */
+			/* 	flex:none; */
+				align-self:flex-start;
+			}
+		.b{
+				/* order:-2; */
+				/* flex-grow:1;  */
+				/* flex-shrink:1; */
+				align-self:flex-end;
+			}
+			/* .c{
+				order:-1;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="small a">1</div>
+			<div class="small">2</div>
+			<div class="small">3</div>
+			<div class="small b">4</div>
+			<div class="small c">5</div>
+			<div class="small">6</div>
+		</div>
+	<!--
+	弹性盒模型:布局中的尺寸问题交给盒子自己解决
+	移动端使用非常方便
+
+	大盒子下达指令 小盒子进行执行
+	display:flex;
+	让子元素以弹性盒模型布局方案进行布局
+
+
+	使用浮动进行布局，会有很大的计算压力
+
+	特点：
+	1.元素从左至右进行布局 ，与浮动类似
+	2.弹性（能曲能伸）如果元素超出一行的宽度，浏览器不知道往哪个方向换行小盒子会等比例压缩（大盒子不变）
+	3.默认不换行
+
+	弹性布局概念
+	1.伸缩容器 父级
+	2.伸缩项目 子级
+
+	主轴 ：元素的排列方向  一共是4个主轴 main axis
+	交叉轴：元素换行方向 和主轴对应的交叉轴是2个 cross axis
+
+	主轴和容器开始的位置叫做 main start 
+	主轴和容器结束的位置叫做 main 
+
+	交叉轴和容器开始的位置叫做 cross start 
+	交叉轴和容器结束的位置叫做 cross end
+
+	父级属性
+	1，元素排列方向 flex-direction
+	1)row 元素水平显示 与一行一样 默认值
+	2）row-reverse 与行一样 但是反向
+	3）column 元素垂直显示 与一列一样
+	4）column-reverse 与列一样 但是反向
+
+	2.换行方式
+	flex-wrap 
+	1)nowrap  不换行 默认
+	2）wrap 换行
+	3）wrap-reverse 反向换行
+
+	3.建立坐标系
+	flex-flow:flex-direction flex-wrap;
+
+	4.定义项目在主轴方向上的对齐方式
+	justify-content
+`	1)flex-start 主轴的开始 默认
+	2)flex-end 主轴的结束
+	3）center 主轴的中心
+	4)space-between 项目再主轴上元素间隙均分 开始元素和结束项目都会帖着容器
+	5）space-around 也是一种均分法则 元素在主轴2边都有相同的间隙 
+
+	5.元素在交叉轴上的对齐方式(单行)
+	align-items
+	1)stretch 默认 项目被拉伸以适应整个容器
+	2)flex-start 交叉轴的开始
+	3)flex-end 交叉轴的结束
+	4）center 交叉轴的中心
+	5)baseline 项目在基线上
+
+	5.元素在交叉轴上的对齐方式(多行)
+	align-content
+	1)stretch 默认 项目被拉伸以适应整个容器
+	2)flex-start 交叉轴的开始
+	3)flex-end 交叉轴的结束
+	4）center 交叉轴的中心
+	4)space-between 项目再交叉轴上元素间隙均分 开始元素和结束项目都会帖着容器
+	5）space-around 也是一种均分法则 元素在交叉轴2边都有相同的间隙 
+
+	子级属性
+	1.项目的排列顺序
+	order 整数  给元素一个权重
+	默认是0  数值越大越在后面 可以为负数
+
+	2.放大比例 
+	flex-grow  
+	要有富裕才放大
+	0是默认值 
+	子元素的尺寸 =父级元素剩余的空间*（子元素单独设置的比例/所有子元素设置的比例）+原来的尺寸
+
+	3.压缩比例
+	flex-shrink
+	元素满一行之后不允许换行才有压缩
+	正整数 
+	1是默认值 0是不压缩 按你设置的写  数值越大越压缩
+	子元素的尺寸 =原来的尺寸-父级元素不够的空间*子元素单独设置的比例/所有子元素设置的比例
+
+	4.项目占据主轴上的空间
+	flex-basis
+	1)百分比 不允许负数
+	2）px 
+	3)auto flex-basis无特定宽度 才会取决于width 如果没有写width 由内容撑开
+	4）content 基于内容自动计算
+
+	5.flex属性
+	1)auto 相当于 flex-grow:1 flex-shrink:1 auto 
+	2)none 相当于 flex-grow:0 flex-shrink:0 auto 
+	3)initial  设置为默认值  相当于 flex-grow:0 flex-shrink:1 auto 
+	4)inherit  从父元素继承该属性
+
+	6.允许单个项目和其他项目不一样的对齐方式  可以覆盖align-items
+	align-self
+	1）auto 继承父元素的align-items 默认值
+	2)stretch 项目被拉伸以适应整个容器
+	3)flex-start 交叉轴的开始
+	4)flex-end 交叉轴的结束
+	5）center 交叉轴的中心
+	6)baseline 项目在基线上
+
+
+	-->
+	</body>
+</html>

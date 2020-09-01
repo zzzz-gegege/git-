@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style type="text/css">
+		/* list-style:none;
+		list-style-position:inside;
+		transparent
+		box-sizing:border-box; */
+		span{
+			margin:0 50px;
+			font-size:1em;/* em父级元素字体大小 */
+			font-family:
+			vertical-align:baseline;(y轴方向对其)
+			vertical-align:middle;
+			font-weight:
+			text-decoration:none   
+			text-indent:
+			text-align:(x轴对齐方式)
+			line-height:
+		}/* 行内盒模型上下外边距无效,左右外边距有效 auto无效*/
+		@font-face{
+			font-family:
+			src:url("文件地址")
+		}
+		span{
+			display:inline-block;
+			margin:50px 50px;
+		}
+			/* p标签里面不可以嵌套div以及其他的块级元素
+			a标签里面可以嵌套任何元素
+			元素不要直接嵌套自己（div除外）
+			就算改变显示类型，行内元素依然是行内元素 不可以嵌套块级元素 */
+		div{
+			background-image:
+			background-repeat:repeat-x   repeat-y  no-repeat;
+			background-size:
+			background-position:
+			background-clip:
+			background-attachment:fixed;
+			overflow:hidden;
+			background:red url("") no-repeat scroll  20px 20px/30px 30px;
+			颜色 图片 平铺  关联 定位/大小；
+		}
+		div{
+			border-radius:
+			border-radius:x/y;
+			background-image:linear-gradient(to  方向   颜射分布)
+			background-image:radius-gradient(circle farthest-side  at  颜色分布)
+		}
+		span{
+			float:left;
+			width:50px;
+			height:50px;
+			/* 浮动使行内元素支持宽高 auto无效 */
+		}
+		div::after{
+			display:block;
+			content:"";
+			clear:both;
+		}
+	</style>
+ </head>
+ <body>
+	<div>
+		<span>1111</span><span>2222</span>
+	</div>
+ </body>
+</html>

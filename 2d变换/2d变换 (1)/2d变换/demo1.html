@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			.box{
+				position:absolute;
+				width:300px;
+				height:300px;
+				/* background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588953046378&di=b2ec147cbbe5380775ecf8ead7ff1e24&imgtype=0&src=http%3A%2F%2Fm.360buyimg.com%2Fn12%2Fjfs%2Ft2854%2F91%2F1310755871%2F165403%2F95cfbe1a%2F573ac9e2Na5b07e4c.jpg%2521q70.jpg") 0 0/300px 300px; */
+				/* border-radius:50%; */
+				border:1px solid red;
+				margin:100px;
+		/* 		transform-origin:left; */
+			/* 	transform:skewY(160deg); */
+				animation:roll 10s linear infinite ;
+				background:url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1277212145,3298019166&fm=26&gp=0.jpg") 0 0/300px 300px;
+				}
+			/* .tr{
+				transform:translateY(200px);
+			} */
+		/* @keyframes roll{
+				from{
+					transform:skew(0deg,0deg);
+				}
+				to{
+					transform:skew(120deg,240deg);
+				}
+			} */
+		/* 	@keyframes move{
+				from{
+					transform:translate(0);
+				}
+				to{
+					transform:translate(600px);
+				}
+			} */
+		</style>
+	</head>
+	<body>
+		<!-- <div class="box tr"></div> -->
+		<div class="box">11111</div>
+		<!--
+			2d变换
+			transform
+			主体：页面中的元素
+			方式：旋转 缩放 移动和倾斜
+			核心概念：使物体发生位置上的变化或者形状的变化
+
+			1.移动(位移)
+			老家留坑 功能性质和相对定位简直一样
+
+			区别：
+			1.定位有层级，参照物是自己
+			2.本质上区别
+			浏览器的底层原理
+			1）解析代码
+			2）html---》dom树
+			3）css---》cssom
+			4）js..
+			5)dom+cssom--》render树
+			6）render树---》生成渲染的组织架构 （重排）
+			块级元素层级 浮动元素层级 行内元素层级 定位层级
+			7）进行绘制 展示出效果（重绘）
+
+
+			定位是危险样式 所以页面的其他结构进行重绘和重排
+			结论：计算资源消耗很高
+
+			transform只是在重绘中的过程中改变绘制的方法（相位转变）推荐
+			结论：计算资源消耗较低，性能比较高
+
+			取值：
+			1.一个值 默认是x轴的方向
+			2.二个值 第一个值是x轴的方向 第二个值是y轴的方向 
+
+			拆分
+			可以单独拆分成 
+			translateX(200px) translateY(200px)
+
+			居中方式的改进
+			.box{
+				position:absolute;
+				left:50%;
+				top:50%;
+				transform:translate(-50%,-50%);百分数是相当于自己本身的
+				width:300px;
+				height:300px;
+				background-color:#ffff00;
+				}
+
+			2.旋转
+				rotate(angle)
+				旋转必须围绕着一个轴进行旋转 绕着中心点（z轴）去旋转
+
+				正数是顺时针 负数是逆时针
+
+				单位
+				1.deg 度数
+				2.rad  弧度 1rad约等于57.3度
+				3.turn 圈
+
+				transform的样式会从先到后进行执行
+
+			3.变换基点
+			transform-origin：x,y; 可以改变我们的旋转中心点
+			默认基点是中心点（50%，50%） 相当于center center
+			参数值
+			1.关键词 默认是center top/bottom/left/right
+			2。像素 px  可以为负数
+			3.百分数 % 可以为负数
+
+			设置一个值x轴 y轴默认是50%
+			设置二个值 第一个是x轴 第二个是y轴
+
+			4.缩放 
+			scale(x,y) 整体放大或者缩小
+			正数 小数 0 负数
+
+			>1是放大
+			1>x>0 是缩小
+			0是看不见了
+			0>x>-1 是反向缩小
+			<-1 是反向放大
+
+
+			可以让字体突破浏览器设置的最小字体大小
+			一个值 代表x轴也代表y轴
+			二个值 第一个代表x轴 第二个代表Y轴
+
+			scale(0)和display:none
+			一个只是看不见 一个是元素不存在了（不渲染）
+
+			5.倾斜
+			skew （x,y）
+			
+			一个值是表示 水平方向的倾斜（x轴）
+			二个值是 第一个值表示水平方向的倾斜（x轴）第二值是y轴的倾斜
+
+			x轴逆时针为正
+			y轴顺时针为正
+
+			拆分skewX() skewY()
+
+		-->
+
+	</body>
+</html>

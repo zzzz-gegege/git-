@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>2d变换</title>
+ </head>
+ <body>
+	<!-- 2d变换
+	transform
+	核心概念:用于块级元素旋转 缩放 移动和倾斜,发生位置上的变化或者形状的变化
+	1.位移 transform:translate
+	老家留坑 与想对定位相似,
+	与定位的区别:
+	1)定位有层级
+	2)本质区别:定位会影响渲染树组织结构,生成回流,使计算资源很高
+		transform只是在重绘中的过程中改变绘制的方法（相位转变）推荐
+		结论：计算资源消耗较低，性能比较高
+	取值：
+		1.一个值 默认是x轴的方向
+		2.二个值 第一个值是x轴的方向 第二个值是y轴的方向 
+		
+	旋转 transform:rotate
+	旋转必须围绕着一个轴进行旋转 绕着中心点（z轴）去旋转
+	正数是顺时针 负数是逆时针
+	单位
+		1.deg 度数
+		2.rad  弧度 1rad约等于57.3度
+		3.turn 圈
+
+	!!!transform的样式会从先到后进行执行
+	
+		
+	3.变换基点
+	transform-origin：x,y; 可以改变我们的旋转中心点
+	默认基点是中心点（50%，50%） 相当于center center
+	参数值
+		1.关键词 默认是center top/bottom/left/right
+		2。像素 px  可以为负数
+		3.百分数 % 可以为负数
+
+		设置一个值x轴 y轴默认是50%
+		设置二个值 第一个是x轴 第二个是y轴
+	
+	4.缩放 
+	scale(x,y) 整体放大或者缩小
+	正数 小数 0 负数
+
+	>1是放大
+	1>x>0 是缩小
+	0是看不见了
+	0>x>-1 是反向缩小
+	<-1 是反向放大
+
+
+	可以让字体突破浏览器设置的最小字体大小
+	一个值 代表x轴也代表y轴
+	二个值 第一个代表x轴 第二个代表Y轴
+
+	!!!scale(0)和display:none   
+	一个只是看不见 一个是元素不存在了（不渲染）
+	
+	5.倾斜
+	transform:skew （x,y）
+			
+	一个值是表示 水平方向的倾斜（x轴）
+	二个值是 第一个值表示水平方向的倾斜（x轴）第二值是y轴的倾斜
+
+	x轴逆时针为正
+	y轴顺时针为正
+
+	拆分skewX() skewY()
+	-->
+ </body>
+</html>

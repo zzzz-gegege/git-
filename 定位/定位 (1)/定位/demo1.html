@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			/* .grandfather{
+				position:absolute;
+				position:relative;
+				width:700px;
+				height:1200px;
+				margin:50px auto;
+				background-color:#33ccff;
+			}	
+			.father{
+				position:absolute;
+				z-index:3;
+				border:100px solid red;
+				padding:100px;
+				width:600px;
+				height:600px;
+				margin:50px auto;
+				background-color:#ffff00;
+				font-size:30px;
+			}
+			.son-o{
+				position:absolute;
+				z-index:3;
+			top:400px;
+				bottom:400px;
+				left:400px;
+				right:400px;
+				margin:100px;
+				float:left;
+				width:100px;
+				height:100px;
+				background-color:#ccffff;
+			}
+			.son-two{
+				position:absolute;
+				z-index:3;
+				z-index:2;
+				left:400px;
+				position:absolute;
+				width:200px;
+				height:200px;
+			margin:100px auto;
+				background-color:#cc66cc;
+			}
+			.son-t{
+				position:absolute;
+				z-index:-1;
+				z-index:1;
+				position:relative;
+				top:-100px;
+				left:200px;
+				width:300px;
+				height:300px;
+				background-color:#ff3399;
+			}
+			span{
+				position:absolute;
+				z-index:2;
+				top:200px;
+				left:600px;
+			float:left;
+				width:100px;
+				height:100px;
+				background-color:#0033ff;
+			} */
+			.father{
+				position:relative;
+				width:600px;
+				height:600px;
+				/* margin:50px auto; */
+				background-color:#ffff00;
+				font-size:30px;
+			}
+			.son{
+				position:absolute;
+				left:50%;
+				top:50%;
+				/* margin:auto; */
+				margin-top:-60px;
+				margin-left:-60px;
+				width:120px;
+				height:120px;
+				background-color:#ccffff;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div class="grandfather">
+			<div class="father">
+				<div class="son-o">1</div>
+				<div class="son-two">2</div>
+				<div class="son-t">3</div>
+			</div>
+		</div>
+		<span>111</span> -->
+		<div class="father">
+				<div class="son">1</div>
+			</div>
+		<!--
+			定位
+			作用：精确控制元素的位置状态，对任意元素进行位置的微调
+
+			可以调整页面布局的大多数位置问题
+			
+			绝对定位
+			position:absolute;
+			观念
+			1.需要参照物
+			1)单独设置了一个绝对定位的盒子
+			参照物是浏览器窗口
+			2)父辈进行了定位
+			参照物是父辈（padding开始）
+			多个父辈设置了  随关系近听谁的
+
+
+
+			2.移动 ：坐标系
+			top  从上往下
+			bottom
+			left
+			right
+
+			进行冲突 以上(top)  以左(left)为尊
+
+
+			特性
+			1.元素脱离文档流
+			2.auto无效
+			3.使行内元素支持宽和高
+			4.绝对定位的盒子会影响其他盒子
+			5.一般配合参照物  父相子绝(父亲相对定位  儿子绝对定位)***
+			6.元素的层级变高
+
+
+			相对定位
+			position:relative;
+			相对于自身位置进行偏移（参照物是自己）
+			1.如果仅仅设置了相对定位，跟标准流的盒子没有什么区别
+			2.移动
+
+			特性
+			1.不脱离文档流，对于原来的结构没有影响
+			2.不影响元素本身的特性
+			3.老家留坑
+
+			作用：
+			1.进行位置的调整
+			2.作为我们绝对定位的参照物
+
+			静态定位
+			position:static;
+			默认(相当于没有设置定位)
+			指的元素正常的布局行为
+			不支持top/left...进行偏移
+
+			固定定位
+			position:fixed;
+			作用：1.返回顶部栏 2.固定导航栏3.小广告
+			相对于浏览器进行定位
+			不脱离文档流  不随着页面的滚动而滚动
+
+			
+			层级z-index（只对定位有用  绝对 相对 固定）
+			默认层级是0**
+			谁大谁在上面**
+			可以为负数
+			没有单位 直接写整数
+
+			从父现象 父亲怂了 儿子再牛逼也没有用
+
+			元素绝对居中（水平和竖直居中）****
+			1.
+				position:absolute;
+				left:0;
+				right:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+
+				父级宽和高比儿子的宽和高大
+
+			2.
+				position:absolute;
+				left:50%;
+				top:50%;
+				margin-top:-50px;（元素本身高度的一半）
+				margin-left:-50px;（元素本身宽度的一半）
+
+				必须知道元素本身的宽和高
+
+		-->
+
+
+	</body>
+</html>

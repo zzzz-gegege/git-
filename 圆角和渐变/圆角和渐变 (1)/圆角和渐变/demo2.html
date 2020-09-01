@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:500px;
+				height:500px;
+				background:radial-gradient(skyblue 20%,pink 30%) no-repeat top left/100px 100px,linear-gradient(skyblue 20%,pink 30%) no-repeat bottom right/100px 100px,#ffff66;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	<!--
+	css渐变 有规律的渐渐变化 在前端中通常指的颜色变化的实现方式 2个颜色 或者多个颜色(矢量效果 放大不会失真)
+
+	背景加的 background-image(2个以上的颜色 在浏览器看来就是图片)
+	渐变的本质就是添加了一张图片 靠自己的代码去画出来的
+
+	线性渐变
+	变化方向 是一条直线
+	语法
+	background-image:linear-gradient(to right,rgba(0,0,0,.8) 33.3%,red 33.3%,red 66.6%,yellow 66.6%);
+
+	颜色冲突  前面的覆盖后面的
+	一瞬间的变化也是渐变
+
+	参数值
+	1.颜色 位置px  %
+
+	德国国旗
+	2.方向
+	to top  从下往上
+	to bottom 从上往下
+	to left 
+	to right
+	
+	角度 deg
+
+	重复渐变
+	repeating-linear-gradient
+
+	径向渐变
+	是从圆心向四周发散
+	background-image:radial-gradient(circle farthest-side at 20% 20%,skyblue 20%,pink 100%);
+
+	参数
+	1.颜色位置
+
+	2.形状
+	圆 circle 默认
+	椭圆 ellipse  要规定椭圆的宽和高
+
+	3.半径
+	1)px
+	2)closest-side 圆心到最近的边
+	3)farthest-side  圆心到最远的边
+	4)closest-corner 圆心到最近的角
+	5)farthest-side  圆心到最远的角
+
+	4.圆心
+	at
+	1)Px 
+	2)%
+	3)关键词 top  bottom left right center  
+
+	重复径向渐变
+	repeating-radial-gradient
+
+	所有的背景样式 他都可以用
+	background:radial-gradient(skyblue 20%,pink 30%) no-repeat top left/100px 100px,linear-gradient(skyblue 20%,pink 30%) no-repeat bottom right/100px 100px,#ffff66;
+	-->
+	</body>
+</html>

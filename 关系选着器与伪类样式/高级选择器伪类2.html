@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>高级选择器</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul{
+			
+			list-style:none;
+		}
+		/* li{
+			float:left;
+			border:1px solid  red;
+		} */
+		input{
+			display:block;
+			width:100px;
+			height:100px;
+			opacity:0;
+		}
+		/* input:checked{
+			width:300px;
+		} checked跟表单元素radio  checkbox有关  被勾选的状态*/
+		/* a:link{
+			color:#ff0000;
+		} link  未访问状态 */
+		/* a:hover{
+			color:#0000ff;
+		} 悬浮的状态 */
+		/* a:active{
+			color:#000;
+		}  点击的状态 */
+		/* a:visited{
+			color:#00ff00;
+		}  访问过的状态 */
+
+		
+		/* p:empty{
+			width:200px;
+			height:200px;
+			background-color:red;
+		} */
+		p:target{
+			background-color:red;
+			width:200px;
+			height:200px;
+		}
+		/* p:not(.select){
+			color:red;	 */
+		/* li:first-child{
+			font-size:30px;
+			color:#0000ff;
+		}
+		li:last-child{
+			font-size:40px;
+			color:#ff0000;
+		}
+		li:nth-child(5){
+			font-size:40px;
+			color:#00ff00;
+		} */
+		/* li:nth-child(odd){
+			font-size:50px;
+			color:#ff0000;
+		} */
+		/* li:nth-child(even){
+			font-size:50px;
+			color:#ff0000;
+		}
+		li:only-child{
+			font-size:50px;
+			color:#ff0000;
+		} */
+		/* p:first-child{
+			font-size:50px;
+			color:#ff0000;
+		} */
+		/* li:first-of-type{
+			font-size:50px;
+			color:#ff0000;
+		}
+		li:last-of-type{
+			font-size:50px;
+			color:#ff0000;
+		}
+		p:last-child{
+			font-size:50px;
+			color:#ff0000;
+		}
+		li:nth-of-type(3){
+			font-size:50px;
+			color:#ff0000;
+		}
+		p:nth-of-type(2){
+			font-size:50px;
+			color:#ff0000;
+		} */
+		/* p:only-of-type{
+			font-size:50px;
+			color:#ff0000;
+		} */
+		/* p:only-child{
+			font-size:50px;
+			color:#ff0000;
+		} */
+		/* li:nth-child(6){
+			font-size:50px;
+			color:#ff0000;
+		} */
+		li:nth-of-type(3){
+			font-size:50px;
+			color:#ff0000;
+		}
+		.qing::after{
+			content:"阿青说的";
+			font-size:40px;
+			color:#00ff00;
+		}
+	</style>
+ </head>
+ <body>
+	<ul class="list" >
+		<li>
+			<input type="radio" name="a" />
+		</li>
+		<li>
+			<input type="radio" name="a" />
+		</li>
+		<li>
+			<input type="radio" name="a" />
+		</li>
+		<li>
+			<input type="radio" name="a" />
+		</li>
+		<a href="#">66666</a>
+		<p>44565865</p>
+		<p>6456856</p>
+		<p class="select">65654554</p>
+		<p></p>
+		<p id="a">1111</p>
+		<p id="b">2222</p>
+		<a href="#b">5156</a>
+		<a href="#a">51651</a>
+		<ul>
+			<p>000</p>
+			<li>1</li>
+			<li>2</li>
+			<p>000</p>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<p>000</p>
+
+		</ul>
+		<ul>
+			<p>000</p>
+		</ul>
+		<p class="qing">大家好</p>
+		<p><span>同学们说:</span>你好</p>
+		<p class="qing">今天天气很好</p>
+		<p><span>同学们说:</span>是的</p>
+		<p class="qing">补学费吗</p>
+		<p><span>同学们说:</span>补</p>
+		<p class="qing">补学费吗</p>
+		<p><span>同学们说:</span>补</p>
+		<p class="qing">补学费吗</p>
+		<p><span>同学们说:</span>补</p>
+		<p class="qing">补学费吗</p>
+		<p><span>同学们说:</span>补</p>
+
+		<!-- css新增的伪类
+		段落中
+		1.选着E元素的第一行 first-line
+		E:first-line{
+		.....;
+		}
+		2.选择E元素第一个  first-letter
+		E:first-letter{
+		.....;
+		}
+		3. E::selection  鼠标选中的文本样式被修改(特殊的伪类选着器双冒号)
+		E::selection{
+		....;
+		}
+		4. E:not(.select) 自身被选中,其他文本样式改变
+		E:not(.select){
+		.....;
+		}
+		5. E:empty选中没有内容的E元素
+		E:empty{
+		.....;
+		}
+		6.选中被毛激活的p
+		p:target
+		<p id="a">111</p>
+		<p id="b">222</p>
+		<a href="#a">aaa</a>
+		<a href="#b">bbb</a>
+		
+
+		1.选中我们的E元素 这些E元素必须是他们父级的第一个子元素
+		E:first-child{
+			...;
+		}
+		2.选中我们的E元素 这些E元素必须是他们父级的最后一个子元素
+		E:last-child{
+			...;
+		}
+		3.选中我们的E元素 这些E元素必须是他们父级的第n个子元素
+		E:nth-child(n){
+			....;
+		}
+		4.选中我们的E元素 这些E元素必须是他们父级的奇数行子元素
+		E:nth-child(odd){
+			...;
+		}
+		5.选中我们的E元素 这些E元素必须是他们父级的偶数行子元素
+		E:nth-child(even){
+			...;
+		}
+		6.选中我们的E元素 这些E元素必须是他们父级的唯一子元素
+		E:only-child{
+			...;
+		}
+		7.选中我们的E元素 这些E元素必须是他们父级E元素第一个
+		E:first-of-type{
+			....;
+		}
+		8.选中我们的E元素 这些E元素必须是他们父级E元素最后一个
+		E:last-of-type{
+			...;
+		}
+		9.选中我们的E元素 这些E元素必须是他们父级E元素n个
+		E:nth-of-type(n){
+			...;
+		}
+		10.选中我们的E元素 这些E元素必须是他们父级E元素唯一个
+		E:only-of-type{
+			....;
+		}
+			对比
+		1.nth-child 会在当前标签所有的兄弟中之间判断第n个 满足条件就设置样式
+		2.nth-of-type 会无视其他类型 只在同类型兄弟之间找满足类型去判读 满足就设置样式
+			-->
+	</ul>
+ </body>
+</html>

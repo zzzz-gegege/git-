@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<form action="https://www.taobao.com/"  name="register" target="_blank" >
+			<input type="text" name="username" value="阿青好看" placeholder="阿青聪明" required autofocus>
+			<input type="password" value="密码"/>
+			<input type="radio" value="man" name="sex">男
+			<input type="radio" value="woman" name="sex" checked>女
+			<input type="radio" value="manwoman" name="sex">人妖
+			<input type="checkbox" value="apple" name="fruit">苹果
+			<input type="checkbox" value="bannana" name="fruit" checked>香蕉
+			<input type="checkbox" value="strawberry" name="fruit">草莓
+			<input type="number" min="1" max="99" step="3" value="5">
+			<input type="range"  value="10">
+			<input type="date">
+			<input type="month">
+			<input type="week">
+			<input type="time">
+			<input type="datetime-local">
+			<input type="color">
+			<input type="file">
+			<input type="submit" value="提交"/>
+			<input type="button" value="登录"/>
+			<input type="reset" value="重置"/>
+			<textarea name="" id="" cols="12" rows="6"></textarea>
+			<select name="data" id="">
+				<optgroup label="季节">
+				<option value="1">1月</option>
+				<option value="2" selected>2月</option>
+				<option value="3">3月</option>
+				<option value="4">4月</option>
+				<optgroup label="水果">
+				<option value="1">苹果</option>
+				<option value="2" >香蕉</option>
+				<option value="3">草莓</option>
+				<option value="4">葡萄</option>
+			</select>
+			<fieldset>
+				<legend>您的性别是：</legend>
+				<input type="radio" value="man" name="sex">男
+				<input type="radio" value="woman" name="sex" checked>女
+				<input type="radio" value="manwoman" name="sex">人妖
+			</fieldset>
+			<fieldset>
+				<legend>您最爱吃的水果是：</legend>
+				<input type="checkbox" value="apple" name="fruit">苹果
+				<input type="checkbox" value="bannana" name="fruit" checked>香蕉
+				<input type="checkbox" value="strawberry" name="fruit">草莓
+			</fieldset>
+			<input type="radio" value="woman" name="sex" id="woman">
+			<label for="woman">女</label>
+			<button>登录</button>
+		</form>
+		<!--
+		一.表单
+		form  表单元素的区域
+		属性
+		1.action 处理表单往何处发送表单数据  地址
+
+		2.method 规定发送表单数据的Http方法
+		1)get  表单数据会附加在地址栏里面 ？作为分隔符  默认
+		2)post 表单数据会包含在表单体内发给服务器 会更加安全一点 更安全的方法js会学到
+
+		3.name 表示表单的名字,必须是唯一的
+
+		4.target 提交页面的在何处打开
+		_self  
+		_blank
+
+		二.input 输入标签  单标签
+		为表单提供交互控件，以便于接收用户数据
+		属性
+		1.type 控件类型
+		1）text  单行文本输入框*
+		name 必须要用到 存储文本的时候需要
+		value 
+		2）password 密码框*
+		3）radio 单选按钮*
+		通过一致的name进行联系
+		4）checkbox 复选框*
+		通过一致的name进行联系
+		5)number 数字框
+		min="1"最小值 max="99"最大值 进行范围控制
+		step="x" 每次加x 或者减x
+		6)range 音量按钮
+		value 有用
+		7）日期选择
+		date 年月日
+		month 年月
+		week 年周
+		time  小时：分钟
+		datetime-local 年月日小时分钟
+		8）color 颜色
+		9）file 文件域
+		10）按钮
+		submit 提交按钮
+		button  普通按钮
+		reset 重置按钮
+
+		2.name 控件的名称
+		将信息分类 进行类别的识别
+
+		3.value  控件的值（默认的值）
+
+		4.placeholder 默认提示信息(占位符)
+
+		5.disabled 规定应该禁用的input元素
+
+		6.required 必须输入的控件
+
+		7.autofocus 刷新页面自动聚焦
+
+		8.checked 默认被选择的input元素 单选 多选
+
+		三.文本域(多行文本输入框)
+		textarea标签
+		属性
+		name  文本框的名字 不可以省略
+		cols 垂直列宽(字节) 2个字节等于1个汉字
+		rows 水平行数
+
+		四.下拉框
+		1.select 元素创建菜单
+		属性
+		name 名称
+		disabled 规定禁用该下拉列表
+		multiple 规定可选择多个选项
+		size 规定下拉列表可见选项的数目
+		
+		2.option 选项
+		属性
+		selected 规定下拉框里面默认展示选项
+		optgroup 规定选项分组
+
+		五.表单元素分组
+		fieldset  划分一块区域 
+		legend 定义域标题  
+
+		六.label
+		为input元素定义标注
+		为鼠标改进了可用性 可以和表单元素进行绑定
+		可以扩大可以选择的区域
+			<input type="radio" value="woman" name="sex" id="woman">
+			<label for="woman">女</label>
+			for与input的id进行绑定
+
+		七.button标签  兼容性没有input好
+		
+		-->
+	</body>
+</html>

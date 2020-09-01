@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.boxa{
+				width:120px;
+				height:120px;
+				background-color:#ccffff;
+			}
+			.boxb{
+				width:60px;
+				height:60px;
+				background-color:#ff9900;
+			}
+			.boxc{
+				position:absolute;
+				width:40px;
+				height:40px;
+				background-color:#9933ff;
+			}
+			.boxa:hover{
+				width:220px;
+				background-color:#ff99ff;
+			}
+			.boxa:hover .boxc{
+				top:120px;
+				background-color:#006699;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="boxa">
+			<div class="boxb"></div>
+			<div class="boxc"></div>
+		</div>
+		<!--
+			伪类 状态
+			hover 与鼠标的交互效果 悬停效果
+
+			伪元素  2个冒号
+			.boxa::after{
+				content:"";
+				display:block;
+			}
+			伪类 一个冒号
+
+			.boxa:hover{
+				width:220px;
+			}
+			自身样式进行变化
+
+			使其他元素样式进行变化
+
+			冒号之前是鼠标悬停的元素
+			冒号之后是改变样式的元素
+		-->
+	</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<!-- 	<link rel="stylesheet" href="./css/pc.css" media="screen and (max-width:800px)"> -->
+		<style type="text/css">
+		/* 	@media screen and (min-width:600px) and (max-width:800px){
+				div.box{
+					background-color:#ff0000;
+				}
+			} */
+			/* @media screen and (max-width:800px){
+				div.box{
+					flex-direction:column;
+				}
+				.small{
+					width:100%;
+				}
+			}  */
+			/* @import url("./css/pc.css") screen and (max-width:800px);
+			.box{
+				display:flex;
+				height:50vh;
+				width:50vw;
+				border:1px solid #ffcc66;
+			}
+			.small{
+				width:30vw;
+				height:30vh;
+				box-shadow:0 0 10px #000  inset;
+			} */
+			html{
+				font-size:20px;
+			}
+			.big{
+				font-size:0.8rem;
+			}
+			.middle{
+				font-size:0.8rem;
+			}
+			.small{
+				font-size:0.8rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big">1111
+			<div class="middle">2222
+				<div class="small">3333</div>
+		</div>
+	<!--
+	响应式
+	能够方便适配不同的设备
+	响应式
+	发送一个网页 这个网页自动识别设备 通过媒体查询等来展示对应的样式
+
+	自适应
+	写多个页面 根据用户的尺寸来发送不同的页面 
+	
+	特点 
+	1.可伸缩内容区块
+	2.可自由排布的内容区块
+	3.适应页面尺寸的边距
+	4。能够适应页面尺寸的图片
+	5.能够自动隐藏、部分显示的内容
+	6.能够折叠的导航和菜单
+
+	触发条件是宽度
+	核心技术 css技术 基于媒体查询@media(查询设备 根据设备显示对应的网页)
+
+	定义媒体查询的规定 @
+
+	@media screen and (width:600px){
+				div.box{
+					background-color:#ff0000;
+				}
+			}
+	
+	1.媒体类型
+	1)all  所有媒体
+	2）screen 彩屏设备
+	3)print 用于打印机和打印浏览
+	4）speech  用于屏幕阅读的发声设备
+	
+	逻辑运算符 and进行连接
+
+	()查询设备的宽度{}
+
+	不会写一个具体的数值
+	会写一个范围
+	max-width  <=600px
+	min-width  >=600px
+	(min-width:600px) and (max-width:800px)	600px<=x<=800px
+	orientation:portrait 竖屏
+	orientation:landscape横屏
+		
+	内联引入
+	
+	外联引入
+	1.<link rel="stylesheet" href="./css/pc.css" media="screen and (max-width:800px)">  用这个方法引入就可以了
+
+
+	2.@import url("./css/pc.css") screen and (max-width:800px);  写在css样式的第一排
+
+	优缺点
+	优点
+	面对不同的分辨率设备灵活性高  能够快捷的解决设备适应的问题
+
+	缺点 
+	工作量很大 代码很累赘  会隐藏一些无用的元素 加载时间延长
+
+	今后的开发:响应式和自适应配合使用
+	在自适应的基础上做响应式
+
+	其他方案去做页面的适配
+	1.vw vh布局
+	100vw = 浏览器的宽度
+	100vh  =浏览器的高度
+	没有父级概念 只跟浏览器窗口有关系
+
+	布局会出现小数点后面很多位
+	一般适用于大盒子的尺寸定位
+
+	2.rem适配
+	root 根据浏览器设置html标签的字体大小
+	不同的设备有不同的分辨率 直接写像素的是不完美的
+	设备的供应商调好了字体的大小 
+	假如一个手机一行能放40个字 那么40rem是它的宽度
+
+
+
+
+	移动端适配
+	1.<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	width 控制我们视口宽度 可以精确的设置具体像素单位或者
+	device-width这一特殊值表示页面宽度为屏幕的宽度
+	height 与宽度对应
+	initial-scale  初始比例
+	maximum-scale 允许缩放的最大比例 一般禁止缩放 网页布局会发生混乱
+	minimum-scale 允许缩放的最小比例
+	user-scalable  是否允许缩放 不允许
+	
+	2.用百分比去写元素的宽度  不写绝对宽度
+
+	3.让子元素撑起父元素的高度 不写绝对高度
+
+	4.字体使用相对大小 em  rem 
+
+	主流方法
+	自适应(移动端) 不同设备
+	响应适 一个设备通过宽度进行分界显示
+	-->
+	</body>
+</html>

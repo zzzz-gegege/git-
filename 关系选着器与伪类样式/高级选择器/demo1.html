@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			/* .list li{
+				float:left;
+				border:1px solid red;
+			}
+			input{
+				display:block;
+				width:100px;
+				height:100px;
+				opacity:0;
+			}
+			input:enabled{
+				width:300px;
+			} */
+			/* a:link{
+				font-size:40px;
+				color:red;
+			}
+			a:visited{
+				font-size:40px;
+				color:#0000ff;
+			}
+			a:hover{
+				font-size:40px;
+				color:green;
+			}
+			a:active{
+				font-size:40px;
+				color:#ff0000;
+				display:block;
+				width:300px;
+				height:300px;
+				background-color:yellow;
+			} */
+			/* #a:target{
+				background-color:yellow;
+				width:300px;
+				height:300px;
+			} */
+			/* .list li:nth-child(2){
+				font-size:40px;
+				color:green;
+			} */
+			/* p:nth-of-type(1){
+				font-size:40px;
+				color:green;
+			} */
+		/* 	a[href*="www"]{
+				font-size:40px;
+				color:green;
+			} */
+			.aqing::before{
+				content:"阿青说：";
+				font-size:40px;
+				color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <ul class="list">
+			<li>
+				<input type="radio" name="a" />
+			</li>
+			<li>
+				<input type="radio" name="a" disabled/>
+			</li>
+			<li>
+				<input type="radio" name="a" />
+			</li>
+			<li>
+				<input type="radio" name="a" />
+			</li>
+		</ul> -->
+		<!-- <a href="#">111111</a> -->
+		<!-- <p>晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷，渔人甚异之，复前行，欲穷其林。
+		
+		林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。
+		
+		见渔人，乃大惊，问所从来。具答之。便要还家，设酒杀鸡作食。村中闻有此人，咸来问讯。自云先世避秦时乱，率妻子邑人来此绝境，不复出焉，遂与外人间隔。问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”
+		
+		既出，得其船，便扶向路，处处志之。及郡下，诣太守，说如此。太守即遣人随其往，寻向所志，遂迷，不复得路。
+		
+		南阳刘子骥，高尚士也，闻之，欣然规往。未果，寻病终，后遂无问津者。</p>
+			<p class="aa">223242</p>
+			<p></p> -->
+			<!-- <p id="a">111</p>
+			<p id="b">222</p>
+			<a href="#a">aaa</a>
+			<a href="#b">bbb</a> -->
+		<!-- 	<ul class="list">
+				<li class="aa">1</li>
+				<p>5</p>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul> -->
+			<!-- <a href="https://www.taobao.com/" target="_blank">1</a>
+			<a href="https://www.shiguangkey.com/">2</a> 
+			-->
+			<p class="aqing">大家好！</p>
+			<p>同学们说：你好！</p>
+			<p class="aqing">今天天气很好！</p>
+			<p>同学们说：是的！</p>
+			<p class="aqing">补学费吗！</p>
+			<p>同学们说：补！</p>
+	<!--
+	高级选择器
+	基本选择器: 
+	标签选择器 tagname 
+	类名选择器 .class 
+	id选择器  #id 
+	通配符选择器 *
+
+	组合选择器 div.a
+
+	关系选择器
+	后代  空格
+	子元素 >
+	相邻兄弟 +
+	通用兄弟 ~
+
+	css层叠样式表
+	越精确越生效 id>类>标签
+	先比层级 层级相等再系数 系数层级都相等再先后顺序 后写生效
+	行内样式优先级最高
+	！important  优先级无限大  强制修改优先级  不推荐
+		
+	（可以减少工作量）
+	1.选择器选中元素是从内到外的
+	2.先找到元素再去匹配条件 不然就结束
+	3.如果条件满足最终设置样式
+
+	1.选择器不要写很多无意义的内容（连续的标签名）
+	2.如果选择器很复杂 加名字解决
+
+	伪类
+	:hover 鼠标悬停
+	:visited 被访问过的选择器（一般是针对a标签）
+	:link 没有被访问的时候
+	:active 激活  鼠标按下去的时候
+	:visited 写在 :hover :active之前
+	否则会覆盖 :hover :active样式
+
+
+	跟表单有关伪类
+	:focus 聚焦
+	:checked 被勾选的状态 单选  多选
+	:disabled 选择不能被操作的input
+	:enabled  选择能被操作的input
+	
+	css新增的伪类选择器
+	段落中
+	1.选择E元素第一行
+	E:first-line
+	2.选择E元素第一个字符
+	E:first-letter
+	3. 被选中的文本样式被修改（双冒号）鼠标选中
+	E::selection
+	4.反选 选中除了.select之外的E元素
+	E:not(.select)
+	5.选中没有内容的E元素
+	E:empty
+	6.选中被锚点激活的p
+	p:target
+	<p id="a">111</p>
+	<p id="b">222</p>
+	<a href="#a">aaa</a>
+	<a href="#b">bbb</a>
+
+	1.选中我们的E元素 这些E元素必须是他们父级的第一个子元素
+	E:first-child
+	2.选中我们的E元素 这些E元素必须是他们父级的最后一个子元素
+	E:last-child
+	3.选中我们的E元素 这些E元素必须是他们父级的第n个子元素
+	E:nth-child(n)
+	4.选中我们的E元素 这些E元素必须是他们父级的奇数行子元素
+	E:nth-child(odd) E:nth-child(2n-1)
+	5.选中我们的E元素 这些E元素必须是他们父级的偶数行子元素
+	E:nth-child(even) E:nth-child(2n)
+	6.E:nth-child(3n)
+	7.选中我们的E元素 这些E元素必须是他们父级的唯一子元素
+	E:only-child
+
+
+	1.选中我们的E元素 这些E元素必须是他们父级E元素第一个
+	E:first-of-type
+	2.选中我们的E元素 这些E元素必须是他们父级E元素最后一个
+	E:last-of-type
+	3.选中我们的E元素 这些E元素必须是他们父级E元素n个
+	E:nth-of-type(n)
+	4.选中我们的E元素 这些E元素必须是他们父级E元素唯一个
+	E:only-of-type(n)
+
+	对比
+	1.nth-child 会在当前标签所有的兄弟中之间判断第n个 满足条件就设置样式
+	2.nth-of-type 会无视其他类型 只在兄弟之间找满足类型去判读 满足就设置样式
+
+	属性选择器
+	1.匹配所有有attr属性的E元素
+	E[attr]
+	2.匹配所有有attr属性等于"val"的E元素
+	E[attr=val]
+	3.匹配所有有attr属性等于"val" 并且attr2属性等于"val2"的E元素
+	E[attr=val][attr2=val2]
+	4.匹配所有有attr属性等于"val"开头的E元素
+	E[attr^=val]
+	5.匹配所有有attr属性等于"val" 结尾的E元素
+	E[attr$=val]
+	6.匹配所有包含attr属性等于"val" 的E元素
+	E[attr*=val]
+
+	伪元素的使用
+	是通过css生成的元素
+	最主要的作用是替代空标签
+
+	特性
+	1.是生成一个行内元素
+	所以要设置伪元素的宽高需要改变显示类型
+	2.一个元素只能有一个before  一个after
+	3.content激活伪元素的
+	4.只有双标签才有伪元素
+	5.可以给伪元素设置样式
+	6.父级是当前元素
+	-->
+	</body>
+</html>

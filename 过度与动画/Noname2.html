@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>主动动画</title>
+	<style type="text/css">
+		/* *{
+			margin:0;
+			padding:0;
+		} */
+		body{
+			height:1200px;
+		}
+		.box{
+			width:50px;
+			height:72px;
+			background:url("./1.png");
+			animation-name:move;
+			animation-duration:3s;
+			animation-delay:0s;
+			animation-timing-function:steps(10);
+			animation-iteration-count:infinite;
+		}
+		.run{
+			position:absolute;
+			width:50px;
+			height:72px;
+			animation-name:run;
+			animation-duration:6s;
+			animation-timing-function:linear;
+			/* animation-iteration-count:infinite; */
+			animation-play-state:paused;
+		}
+		@keyframes move{
+			0%{background-position:0 0;left:0;}
+			100%{background-position:-500px 0;left:500px;}
+		}
+		@keyframes run{
+			0%{left:0;top:0;}
+			25%{left:500px;top:0;}
+			50%{left:500px;top:500px;}
+			75%{left:0;top:500px;}
+			100%{left:0;top:250px;}
+		}
+		 body:hover>.run{
+			animation-play-state:running;
+			/* animation-iteration-count:infinite; */
+			/* animation-direction:alternate; */
+			animation-fill-mode :forwards;
+		} 
+
+
+ 	</style>
+ </head>
+	<div class="run">
+		<div class="box"></div>
+	</div>
+	
+ <body>
+	<!-- animation主动式动画,能精确控制时间进程的状态
+	要素
+	1)运动状态
+	是没办法时刻进行描述,要找到关键点
+	关键帧   keyframes-selector
+	2)运动时间 :animation-duration
+	样式
+	animation-name动画名字
+	animation-duration持续时间
+	关键帧n个
+	动画n-1个
+	@keyframes  动画名称{
+		关键帧{样式:样式值;样式:样式值;}	
+	}
+	举例:
+	@keyframes move{
+				0%{background-position:0 0;left:0;}
+				100%{background-position:-500px 0;left:500px;}
+	
+	动画延迟 animation-delay
+	可以为负数,刷新页面的时候动画已经完成多少秒
+	动画速率 animation-timing-function
+	1)ease 先慢后快再慢 默认
+	2)ease-in-out 先快后慢再快
+	3)ease-in 匀加速
+	4)ease-out 匀减速
+	5)linear 匀速
+	6)特殊 贝塞尔曲线 （cubic-bezier）
+	7)逐帧动画 steps
+	 
+	 动画执行次数 animation-iteration-count
+	 1)n  (默认n是1)
+	 2)infinite 循环(无穷大)
+	  
+	 animation-play-state
+	 1)paused 暂停
+	 2)running 开始
+
+	 animation-direction动画执行方向
+	 1）normal 正常播放 结束回到起点 默认
+	 2)reverse 反向播放
+	 3）alternate 先正再反（奇数是正 偶数是反）
+	 4）alternate-reverse 先反再正（奇数是反 偶数是正）
+	 
+	 animation-fill-mode  动画结束之后状态]
+	 1)backwards 默认 原始状态-终点-原始状态 
+	 2)forwards  原始状态-终点(动画最后一帧)
+
+	 复合样式
+	 animation:动画名字 动画时间 动画延迟 动画速率 动画次数 动画执行方向;
+
+			} -->
+ </body>
+</html>

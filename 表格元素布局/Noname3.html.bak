@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>表格元素布局</title>
+	<style type="text/css">
+		table{
+			border-collapse:collapse;
+			background-color:#ccccff;
+			width:600px;
+
+		}
+		caption{
+			padding:20px 0;
+			background-color:#9966ff;
+		}
+		td:nth-child(1){
+			text-align:center;
+		}
+		 td{
+			height:30px;
+			border-top:2px solid #fff;
+		}
+		 .right{
+			border-right:2px solid #fff;
+		 }
+		 .left{
+			text-align:left;
+		 }
+	</style>
+ </head>
+ <body>
+	<table>
+		<caption>《课程一》静态网站开发</caption>
+		<tbody>
+			<tr>
+				<td class="right">第一章</td>
+				<td>《基础班》开学典礼</td>
+			</tr>
+			<tr>
+				<td colspan="2">(互联网概述&nbsp;|&nbsp;什么是网站&nbsp;|&nbsp;什么是网页&nbsp;|&nbsp;构成网页的元素&nbsp;|&nbsp;网站制作流程详解&nbsp;|&nbsp;怎么样才能学好拿高薪| WEB前端开发职业的前途| WEB前端开发课程目标及)</td>
+			</tr>
+			<tr>
+				<td class="right">第二章</td>
+				<td>HTML常用标签+背景</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+			</tr>
+			<tr>
+				<td class="right">第三章</td>
+				<td>元素符号+背景</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+			</tr>
+			<tr>
+				<td  class="right" rowspan="3">第四章</td>
+				<td>css样式(Font+Text) +特殊符号</td>
+			</tr>
+			<tr>
+				<td class="left">特殊符号</td>
+			</tr>
+			<tr>
+				<td class="left">(Font+Text)</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+			</tr>
+		</tbody>
+	</table>
+ </body>
+</html>

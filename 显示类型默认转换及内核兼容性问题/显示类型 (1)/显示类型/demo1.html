@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin:0;
+				padding:0;
+			/* 	font-size:0; */
+			}
+			/* .ys{
+				display:inline-block;
+				width:300px;
+				height:300px;
+				background-color:#ffff00;
+				margin:50px 0;
+			}
+			span{
+				font-size:16px;
+			}
+			.aa{font-size:50px;} */
+			/* span{
+				display:block;
+				width:300px;
+				height:300px;
+				background-color:#ffff00;
+			}
+			div{
+				display:inline;
+			} */
+		/* 	a{
+				display:block;
+				width:200px;
+				height:200px;
+			} */
+			div{
+				/* display:none; */
+				/* width:300px; */	
+				width:300px;
+				height:300px;
+				background-color:#ffff00;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div class="ys"><span></span></div>
+		<div class="ys"><span>111x</span></div>
+		<div class="ys"><span>111x</span></div> -->
+		<!-- <span>
+			<div></div>
+		</span> --><!--不可以这么写-->
+		<!-- <p>
+			<div></div>
+		</p> -->
+		<!-- <a href="">
+			<a href=""></a>
+		</a> --><!--不可以这么写-->
+		<!-- <span>
+			<span></span>
+		</span> --><!--不可以这么写-->
+		<!-- <a href="https://www.taobao.com/">
+			<img src="http://img4.imgtn.bdimg.com/it/u=1713396441,1487163637&fm=26&gp=0.jpg" alt="" />
+		</a> -->
+		<div>111111</div>
+		<p>111111</p>
+		<!--
+			显示类型
+			display显示类型: block;块级盒模型
+			display显示类型:inline;行内盒模型
+
+			display:inline-block;行内块盒模型
+			特点：
+			1.是行内元素布局，可以元素并列一排（对外：是行内元素）
+			2.宽和高有效（对内：块级元素）
+			3.边距有效
+			4.auto无效
+			5.继承行内元素的解析空格
+
+			*解决解析空格的办法
+			1.使他们之间没有空格（代码层级不明确，太不美观）
+			2.给body设置font-size:0;
+			给需要设置字体大小的标签设置对应的字体大小
+
+			*行内块元素的对齐问题
+			基线对齐 盒子没有内容的时候 最底部是基线  盒子里面有内容的时候 根据内容最下面一行的基线为准
+
+			代码的注意点
+			p标签里面不可以嵌套div以及其他的块级元素
+			a标签里面可以嵌套任何元素
+			元素不要直接嵌套自己（div除外）
+			就算改变显示类型，行内元素依然是行内元素 不可以嵌套块级元素
+
+			display显示类型:none;没有
+			浏览器都不渲染它（非常彻底）
+
+			
+			浏览器底层渲染原理（不理解也没有关系 ）
+			1.解析HTML(HTML语法解析器)---》DOM树
+			2.解析CSS(CSS语法解析器)---》CSSOM树
+			3.DOM树与CSSOM树---》render（渲染）树
+			4.布局渲染树---》对于渲染树的节点进行布局处理，确定其在屏幕中的显示位置
+			5.绘制渲染树---》遍历UI后端将每个节点绘制出来
+
+			默认样式清除
+			1.*{}把所有的标签内外边距清除
+			2.把所有需要清除的标签都清除
+			3.引入清除文档（新一代的默认样式清除）
+			4.自己根据实际需求设置（最高级）
+
+			浏览器内核
+			内核名称:Trident(IE内核)->IE系列/360浏览器/猎豹浏览器/百度浏览器/世界之窗->   
+ 			Gecko(Firefox内核)->火狐浏览器    -moz-
+ 			Opera现已改用Google Chrome的Blink内核 -o-
+ 			Webkit(Safari内核,Chrome内核原型,开源)->苹果Safari浏览器/安卓默认浏览器     -webkit-
+ 			Blink->Chrome(谷歌自主研发)   - webkit-
+
+			兼容性问题  
+			css3一些新增 兼容老版本的浏览器（防止浏览器不认识）css3
+			-webkit-flex:row;
+			-o-flex:row;
+			-moz-flex:row;
+			flex:row;
+
+		-->
+	</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,p{
+				margin:0;
+				padding:0;
+			}
+			/* div{
+				box-sizing:border-box;
+				width:300px;
+				height:200px;
+				padding:10px;
+				border:40px solid red;
+			margin:100px 20px 40px auto;
+				background-color:cyan;
+				color:green;
+			} */
+			/* body{
+				background-color:#009966;
+			}
+			div{
+				width:0;
+				height:0;
+				border-top:40px solid red;
+				border-bottom:40px solid transparent;
+				border-left:40px solid red;
+				border-right:40px solid transparent;
+			} */
+			div{
+				width:500px;
+				height:500px;
+				background-color:#ffcc66;
+				overflow:hidden;
+			}
+			div>p{
+				width:200px;
+				height:200px;
+				margin:50px;
+				/* padding-top:50px; */
+				background-color:#ff0099;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p></p>
+			<p></p>
+		</div>
+		<!-- <div>111</div> -->
+		<!--
+		盒模型(盒子)
+		块级盒模型
+
+		1.内容区  width(宽度) height(高度)
+		1).没有设置宽度的时候 宽度是继承父级的宽度的
+		2).高度默认是0   由内容撑开 
+
+		2.padding  内边距  不属于内容区 但是属于盒子
+		padding继承盒子颜色  默认是0
+		padding:20px;  上下左右20px的内边距
+		padding:20px 40px;上下20 左右40
+		padding:20px 40px 60px;上20 右左40 下60
+		padding:20px 40px 60px 80px;上20 右40 下60 左80 设置内边距
+
+		padding-top:20px;上
+		padding-bottom:20px;下
+		padding-right:20px;右
+		padding-left:20px;左
+
+		3.border 边框 粗细 样式  颜色 属于盒子
+		样式:none(没有) solid (实线) double(双边框) dashed (虚线) dotted(圆虚线)
+		默认宽度 3px
+		默认颜色 与内容一致
+		默认样式 是none
+
+		语法:border:14px solid red;
+		border-width:10px;上下左右
+		border-width:10px 20px;上下10 左右20
+		border-width:10px 20px 30px;上10 右左20 下30
+		border-width:10px 20px 30px 40px;上10 右20 下30 左40
+		border-color:red;
+		border-style:solid;
+
+		border-top:10px solid red;
+
+		border-top-width:20px;
+		border-top-color:red;
+		border-top-style:solid;
+
+		4.margin 外边距  不属于盒子
+		是盒子与盒子之间的距离 盒子与父级之间的距离 
+		margin:20px;  上下左右20px的外边距
+		margin:20px 40px;上下20 左右40
+		margin:20px 40px 60px;上20 右左40 下60
+		margin:20px 40px 60px 80px;上20 右40 下60 左80 设置外边距
+
+		margin-top:20px;上
+		margin-bottom:20px;下
+		margin-right:20px;右
+		margin-left:20px;左
+
+		1.auto（自动计算，只对外边距有效）可以通过它实现盒子水平居中margin:100px auto;
+		2.margin:100px 20px 40px auto;
+
+		外边距进行冲突的时候 以左为尊 以上为尊
+
+		边框做3角形
+		transparent 透明（继承父级的颜色）
+		div{
+			width:0;
+			height:0;
+			border-top:40px solid red;
+			border-bottom:40px solid transparent;
+			border-left:40px solid red;
+			border-right:40px solid transparent;
+		}
+
+		怪异盒模型？
+		box-sizing:border-box;
+		你设置多宽盒子就是多宽
+		你设置多高盒子就是多高
+		设置的宽/高度-内边距-边框=内容区
+		对外是稳定
+
+
+		标准盒模型？
+		box-sizing:content-box;(从内容开始计算宽度)默认情况 不写
+		宽度（设置的内容区的宽度） +左内边距+右内边距+左边框+右边框=盒子的宽度
+		高度（设置的内容区的高度） +上内边距+下内边距+上边框+下边框=盒子的高度
+		对内（内容区）是稳定
+
+		默认边距的消除
+		body默认边距8px
+		p标签默认边距16px
+		方法
+		1.*{
+			margin:0;
+			padding:0;
+		}  性能浪费 不是很推荐
+		2.body,p{
+				margin:0;
+				padding:0;
+			}
+
+		边距合并的问题
+		1.父子(第一个子元素)元素之间的边距合并
+		解决办法
+		1)父亲border加上边框  (透明的边框)*
+		2)父亲padding-top 
+		3)儿子padding-top  不可以有背景颜色 
+		4)父亲overflow:hidden; bfc*
+
+		2.兄弟之间上下边距合并
+
+		不需要解决
+		随大听谁的
+		-->
+	</body>
+</html>

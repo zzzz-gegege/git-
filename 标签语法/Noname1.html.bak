@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style type="text/css">
+		div{
+			width:200px;
+			height:200px;
+			background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588243825272&di=f528ac4498f7b84234061d5994289ca3&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2Fd62a6059252dd42a1c362a29033b5bb5c9eab870.jpg");
+			 background-size:200px  200px;
+		}
+		div>input{
+			width:200px;
+			height:200px;
+			opacity:0;
+		}
+		#man{
+			list-style:none;
+		}
+	</style>
+ </head>
+ <body>
+	<form action=""><!-- action处理表单往何处发送双引号中是发送的地址-->
+		<input type="" /><!-- input输入标签,输入各种信息, type是input的属性,type="属性值(input类型)" -->
+		<input type="text" /><!-- 单行文本输入框 -->
+		<input type="submit"  value="提交"/><!-- 提交按钮   value="默认值"-->
+		<input type="radio" name="six"/>男
+		<input type="radio" name="sex"/>
+		<input type="radio" name="six"/>
+		<input type="radio" name="six"/>
+		<input type="checkbox" name="a" checked />1
+		<input type="checkbox" name="a" checked />2
+		<input type="checkbox" name="a"  checked/>3
+		<input type="checkbox"  name="a"  />4
+		<input type="checkbox"  name="a" />5
+		<input type="number" /><!-- 数字框 -->
+		<input type="number" min="1" max="999" step="10"/> <!-- min最小  max最大   step="10"  每次加10或减10-->
+		<input type="range" /><!-- range音量按钮 -->
+		<input type="date" />date年月日
+		<input type="button" value="登录"/> <!--  button普通按钮 -->
+		<input type="reset" /><!--  reset重置按钮 -->
+		<textarea name="" id="" cols="30" rows="10"></textarea><!-- cols列数 rows行数 2个字节宽度=1个汉字宽度 -->
+		<select name="month" id="">
+			<option value="">1月</option>
+			<option value="">2月</option>
+			<option value="">3月</option>
+			<option value="">4月</option>
+		</select>
+		<select name="month" id="" size="6">
+			<option value="">1月</option>
+			<option value="">2月</option>
+			<option value="">3月</option>
+			<option value="">4月</option>
+			<option value="">4月</option>
+			<option value="">5月</option>
+		</select>
+		<select name="" id=""  size="3">
+			<option value="">1月</option>
+			<option value="" >2月</option>
+			<option value="" selected>3月</option><!-- selected默认展示 -->
+			<option value="" selected>4月</option>
+			<option value="" selected>4月</option>
+			<option value="">5月</option>
+		</select>
+		<select name="" id=""  size="2">
+			<optgroup  label="季节">
+			<option value="">1月</option>
+			<option value="">2月</option>
+			<option value="">3月</option>
+			<option value="">4月</option>
+			<optgroup  label="水果"><!-- 下拉框分阶段 -->
+			<option value="">苹果</option>
+			<option value="">菠萝</option>
+			<option value="">香蕉</option>
+			<option value="">葡萄</option>
+		</select>
+		<fieldset><!-- fieldset划分选项按钮区域 -->
+			<legend>哈哈</legend><!-- legend区域标题 -->
+			<input type="checkbox"  checked/>
+			<input type="checkbox"  checked/>
+			<input type="checkbox" checked/>
+			<input type="checkbox" />
+			<input type="checkbox" />
+		</fieldset>
+		<input type="radio" id="man" name="sex"/>
+		<label for="man">
+			<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588240851602&di=59b5bfd7ee57a184bd6bf52415516c7f&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2Fd62a6059252dd42a1c362a29033b5bb5c9eab870.jpg" alt=""  width="200px" height="200px"/>
+		</label>
+		<!-- label划分一块区域,用for绑定input的id名,将input的选着区扩大 -->
+		<div>
+			<input type="file" id="a" />
+		</div>
+		
+			
+
+
+
+	</form>
+	<!-- form属性 
+	<form action=""  method="post"></form>
+	method规定发送表单数据的http方法
+	1.get用户数据会显示出来
+	2.post数据会包含在表单体内发给服务器,会更加安全
+	<form action=""  method="post"  name=""></form> name表示表单的名字,声明表单的作用
+	<form action="" method="post" target="_self" ></form>
+	target页面在何处打开
+	_self原来的窗口
+	_blank新窗口
+	input属性
+	<input type="text"  placeholder="提示信息" />  placeholder默认信息提示
+	<input type="text"  placeholder="" disabled/>  输入栏禁用
+	<input type="text"  placeholder="" required/> required必须输入
+	<input type="text"  placeholder="" autofocus/> autofocus刷新页面自动聚焦
+	<input type="password"  />密码框
+	<input type="radio" name=""/>单选按钮
+	<input type="radio"  name=""  checked/> checked默认选中radio
+	<input type="checkbox" name="a" checked />1 checkbox多选
+	<input type="checkbox" name="a" checked />2
+	<input type="checkbox" name="a"  checked/>3
+	<input type="checkbox"  name="a"  />4
+	<input type="checkbox"  name="a" />5
+	radio  checkbox通过一致的name进行绑定
+
+	-->
+ </body>
+</html>

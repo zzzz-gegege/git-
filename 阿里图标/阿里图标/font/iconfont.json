@@ -1,0 +1,51 @@
+{
+  "id": "1814986",
+  "name": "阿里图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1232398",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e71b",
+      "unicode_decimal": 59163
+    },
+    {
+      "icon_id": "6539428",
+      "name": "气泡",
+      "font_class": "qipao",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "14055558",
+      "name": "购物车",
+      "font_class": "gouwuche1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "14311264",
+      "name": "气泡图",
+      "font_class": "qipaotu",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "14501099",
+      "name": "少女",
+      "font_class": "shaonv",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "14501102",
+      "name": "工人",
+      "font_class": "gongren",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- <link href="./css/1.css"  rel="stylesheet"> -->
+		<style>
+		/* 	div{
+				color:pink!important;
+				background-color:blue;
+			}
+			p{
+				color:skyblue;
+			} */
+			/* *{
+				color:skyblue;	
+			} */
+			/* span{
+				color:red;
+			}
+			div{
+				color:red;
+			} */
+			/* .aa{
+				color:red;
+			}
+			#bb{
+				color:pink;
+			}
+			.bb{
+				background-color:skyblue;
+			} */
+			/* #aqing{
+				color:pink;
+			}
+			.aa{
+				color:red;
+			}
+			div{
+				color:blue;
+			}
+			*{
+				color:green;
+			} */
+			div{
+				color:blue;
+				background-color:yellow;
+				font-size:24px;
+			}
+			div{
+				color:green;
+			}
+		</style>
+		<!-- <style>
+			@import "./css/1.css"
+		</style> -->
+	</head>
+	<body>
+		<div class="aa bb" id="aqing">11</div>
+		<div id="bb">11</div>
+		<div class="aa">11</div>
+		<div>11</div>
+		<div>11</div>
+		<p class="aa">22</p>
+		<p id="cc">33</p>
+		<p id="aa">44</p>
+		<span>55</span>
+		<!--
+		HTML 结构层
+		css(层叠样式表) 样式层
+
+		样式:让标签有不一样的显示效果
+
+		引入样式
+		1.行内样式  是写在style属性里面(不要用)
+		 style="color:red;background-color:blue;"
+
+		color 字体颜色
+		background-color 背景颜色
+
+		样式语法
+		样式名称 : 样式值 ;
+
+		优点:看起来方便
+		缺点是不好维护 太繁琐
+
+		2.内联样式  写在头部 的style标签里面
+		div(标签选择器){
+			color:red;
+			background-color:blue;
+		}
+
+		3.外部样式
+		1)引入式(重点) 写在头部   
+		link  单标签
+		语法
+		<link href="./css/1.css"  rel="stylesheet">
+		href 引入css文件的地址
+		rel  指定功能 stylesheet样式表 告诉浏览器 link标签的作用是引入样式表
+
+		2)导入式 写在头部 的style标签里面
+		@import "./css/1.css"
+
+		区别：
+		1.link属于标签 除了加载css文件以外  还可以加载其他文件
+		@import是css提供的一个方法 只能加载css
+
+		2.加载顺序
+		link引用的文档是页面被加载的时候 同时加载
+		@import是等html加载完之后才会加载
+
+
+		样式优先级
+
+		谁近（离标签的距离）听谁的
+		!important(无限高)>行内>内联>外联
+		!important(不要用)
+		
+		css注释的语法
+		/*注释内容*/
+
+
+		选择器
+		1.通配符选择器 *()
+		选中网页的所有标签
+		*{
+				color:red;
+		}
+
+		2.元素(标签)选择器  
+		span{
+				color:red;
+			}
+
+		3.class(类)选择器
+		能重复使用  多个命名直接空格隔开
+		.aa{
+			
+			}
+		
+		4.id选择器
+		不能重复使用  一个标签只能有一个id名
+		#bb{
+			
+			}
+		使用场景1.是js  2.最外面的大盒子
+
+		命名规范
+		1.出现字母 数字 -(连字符) _(下划线) 
+		2.命名必须字母开头 全部小写 不能单个字母
+		3.不允许出现带广告的单词 ad/adver/advertising 防止浏览器吧这个标签当做垃圾广告来处理
+		4.nav-first 2个单词之间用连字符进行拼接
+		5.禁止用数字结尾 
+		6.取名知意(英文) search-bar(搜索框)
+		7.不要出现空格
+
+		选择器优先级
+		越具体的生效
+		!important>行内>id>class>标签
+
+		优先级相同的时候 后写的会覆盖之前的
+
+		font-size:12px;(字体大小)
+		background-color:yellow; 背景颜色
+		-->
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.cube{
+				width:300px;
+				height:300px;
+				margin:100px auto;
+				animation:roll 10s linear infinite;
+				transform-style:preserve-3d;
+			}
+			@keyframes roll{
+				from{
+					transform:rotateY(0deg) rotateX(0deg);
+				}
+				to{
+					transform:rotateY(360deg) rotateX(360deg);
+				}
+			}
+			.small{
+				position:absolute;
+				top:0;
+				left:0;
+				width:300px;
+				height:300px;
+				border:2px solid #000;
+				box-sizing:border-box;
+				font-size:40px;
+				background:url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1277212145,3298019166&fm=26&gp=0.jpg") 0 0/300px 300px;
+				perspective:800px;
+			}
+			.cube .small:nth-child(1){
+				transform:rotateX(90deg) translateZ(150px);
+			}
+			.cube .small:nth-child(2){
+				transform:rotateX(-90deg) translateZ(150px);
+			}
+			.cube .small:nth-child(3){
+				transform:rotateY(90deg) translateZ(150px);
+			}
+			.cube .small:nth-child(4){
+				transform:rotateY(-90deg) translateZ(150px);
+			}
+			.cube .small:nth-child(5){
+				transform:rotateY(0deg) translateZ(150px);
+			}
+			.cube .small:nth-child(6){
+				transform:rotateY(180deg) translateZ(150px);
+			}
+			/*  hover*/
+			.cube:hover .small:nth-child(1){
+				transform:rotateX(90deg) translateZ(180px);
+			}
+			.cube:hover .small:nth-child(2){
+				transform:rotateX(-90deg) translateZ(180px);
+			}
+			.cube:hover .small:nth-child(3){
+				transform:rotateY(90deg) translateZ(180px);
+			}
+			.cube:hover .small:nth-child(4){
+				transform:rotateY(-90deg) translateZ(180px);
+			}
+			.cube:hover .small:nth-child(5){
+				transform:rotateY(0deg) translateZ(180px);
+			}
+			.cube:hover .small:nth-child(6){
+				transform:rotateY(180deg) translateZ(180px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cube">
+			<div class="small">上</div>
+			<div class="small">下</div>
+			<div class="small">左</div>
+			<div class="small">右</div>
+			<div class="small">前</div>
+			<div class="small">后</div>
+		</div>
+		<!--
+		3d变换
+		3维坐标系 xyz轴
+
+		我们是怎么看到立体空间
+		1.双眼：左右眼呈现的效果不一样，然后大脑的运算和模拟
+		2.大脑：近大远小 透视法则
+
+		做出3d的物体
+		1.需要在3d空间中进行旋转
+		绕着x轴或者y轴
+		2.设置景深(有视距离) 给父元素加 perspective 推荐800 100
+
+		景深的基点 perspective-origin
+		默认是50% 50%
+
+		在父级盒子中开启容纳盒子的3d空间transform-style:preserve-3d;
+
+		-->
+	</body>
+</html>

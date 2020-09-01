@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* .form{
+				width:500px;
+				height:400px;
+				border:1px solid #ccc;
+			}
+			input:checked{
+				display:block;
+				width:200px;
+				height:200px;
+			} */
+			*{
+				margin:0;
+				padding:0;
+			}
+			table{
+				width:500px;
+				height:200px;
+				border:1px solid #ccc;
+				margin:auto;
+				border-collapse:collapse;
+				/* border-spacing:10px 30px; */
+			}
+			th,td{
+				width:100px;
+				height:50px;
+				text-align:center;
+				font-weight:normal;
+				border:1px solid #ccc;
+				margin:20px;
+			}
+			.w{
+				width:2000px;
+				height:200px;
+			}
+			.aa{
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <form action="" class="form">
+			<input type="radio" />
+		</form> -->
+		<table>
+			<caption>37班期成绩</caption>
+			<thead>
+				<tr>
+					<th>班级</th>
+					<th>姓名</th>
+					<th>语文</th>
+					<th>数学</th>
+					<th>英语</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>37</td>
+					<td class="w">阿青</td>
+					<td colspan="3">100</td>
+				</tr>
+				<tr>
+					<td>37</td>
+					<td rowspan="2">江江</td>
+					<td class="aa">80</td>
+					<td>98</td>
+					<td>97</td>
+				</tr>
+				<tr>
+					<td>37</td>
+					<td>70</td>
+					<td>38</td>
+					<td>67</td>
+				</tr>
+			</tbody>
+			<!-- <tfoot>
+				<tr>
+					<td>签名</td>
+					<td>阿黑</td>
+				</tr>
+			</tfoot> -->
+		</table>
+		 <!--
+		 表单的补充
+		 outline 外轮廓线
+		 none
+
+		 表单的伪类
+		 :focus 表示聚焦的元素（表单输入）
+		 :focus-within 当后代元素获得焦点的时候 自身运用样式
+		
+		:checked 表示被选择的元素
+
+		表格
+		table
+		display: table;
+		
+		4个部分
+		1.caption 表标题 不需要添加边框线 居中
+		2.thead  表头
+		3.tbody 表正文
+		4.tfoot 表注脚
+
+		单元格是表格的最基本组成部分
+		th是表头的单元格 里面的文字会居中 粗体
+		td是表正文表脚的单元格  里面的文字正常粗细 左对齐
+		tr表格中的每一行
+
+		table不设置宽高度的情况下
+		单元格没有定宽高由内容撑开
+
+		一列的宽度是由最宽的单元格决定的
+		一行的高度是由最高的单元格决定的
+
+		table设置宽高度的情况下
+		table宽度是由设置的宽度决定  单元格的宽度进行计算
+		高度会被内容撑开
+
+		表格支持margin  auto
+		th,td是不支持margin
+
+		表格边框样式
+		border-collapse:
+		collapse 边框合并
+
+		边框进行冲突的情况：
+		表格边框进行覆盖 谁大听谁的
+		边框一样大，是谁有颜色听谁的
+
+		separate 边框分割 默认
+
+		边框间隙 border-spacing:1px 3px;
+		1px 水平方向
+		3px  竖直方向
+
+		表格单元格合并
+		你需要合并什么格子  你先要把多余的格子给删掉
+		合并列只能从左至右   合并行只能从上至下
+		colspan="3" 合并3列
+		rowspan="2" 合并2行
+
+		重置表格默认样式
+		table {border-collapse:collapse;}
+		table,th,td{margin:0;padding:0;}
+		 -->
+	</body>
+</html>

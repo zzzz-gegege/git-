@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:300px;
+				height:300px;
+				margin:100px auto;
+				background-color:#33cccc;
+				/* box-shadow:0 -400px 5px 0 #ffff00,
+							400px 0  5px 0 #6666cc,
+							-400px 0  5px 0 #ff66cc,
+							0 400px 5px 10px #33cc00; */
+				box-shadow:10px 10px 5px 10px #ffff00;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<!--
+			盒子阴影
+			给盒子添加阴影的表现效果
+			box-shadow:10px 10px 5px 10px #ffff00 inset;
+
+
+			属性值的介绍
+			1.水平偏移值
+			2.垂直偏移值
+			3.阴影的模糊半径 指阴影由完全颜色到消失的长度 ，类似于渐变的长度 默认是0
+			4.阴影的大小 默认是0
+			值是n 盒子阴影大小是width=width+2n
+			height=height +2n
+			5.outset默认是外阴影不写 inset内阴影
+			4个边的阴影
+			box-shadow:0 -10px 5px 0 #ffff00,
+							-10px 0  5px 0 #ff66cc,
+							10px 0  5px 0 #6666cc,
+							0 10px 5px 0 #33cc00;
+		
+		盒子阴影的本质是画了盒子 通过偏移值改变位置 
+		多个阴影之间由逗号隔开
+					
+		-->
+	</body>
+</html>

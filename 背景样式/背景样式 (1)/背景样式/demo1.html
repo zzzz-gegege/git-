@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* div{
+				width:500px;
+				height:1200px;
+				padding:40px;
+				border:5px dashed blue;
+				background-color:#ffff00;
+				background-image:url("http://img1.imgtn.bdimg.com/it/u=1701290565,4174898024&fm=26&gp=0.jpg");
+				background-repeat:no-repeat;
+				background-origin:border-box;
+				-webkit-background-clip:text;
+				background-clip:text;
+				color:rgba(0,0,0,0);
+				font-size:100px;
+				overflow:auto;
+				background-attachment:fixed;
+				background-size:cover;
+				background-position:20px;
+			} */
+			/* *{
+				margin:0;
+				padding:0;
+			}
+			.content-a,.content-b,.content-c{
+				width:100%;
+				height:680px;
+				background-size:cover;
+				background-attachment:fixed;
+				background-position:center 0;
+			}
+			.content-a{
+				background-image:url("http://5b0988e595225.cdn.sohucs.com/q_mini,c_zoom,w_640/images/20170620/848251ae97ff437b84ce3501bef75021.jpg");
+			}
+			.content-b{
+				background-image:url("http://www.3dmgame.com/uploads/allimg/150210/153_150210110458_5.jpg");
+			}
+			.content-c{
+				background-image:url("http://img.improve-yourmemory.com/pic/a11fafa08b601718250172738cefcc28-4.jpg");
+			}
+			.body{
+				width:100%;
+				height:400px;
+				background-color:#6633cc;
+				text-align:center;
+				line-height:400px;
+				font-size:26px;
+				color:#fff;
+			} */
+		</style>
+	</head>
+	<body>
+		<!-- <div class="content-a"></div>
+		<div class="body">见证奇迹的时刻</div>
+		<div class="content-b"></div>
+		<div class="body">见证奇迹的时刻</div>
+		<div class="content-c"></div> -->
+		<!--
+		背景样式
+
+		1.背景颜色  background-color
+		1)关键词 red blue
+		2)#  6个十六进制（0-f） 
+		光的三原色  红绿蓝
+		#ff0000 红色 #f00 
+		#00ff00 绿色  #0f0 
+		#ffffff  白色
+		#000000  黑色
+		3)rgb  red红色 green绿 blue蓝色
+		取值 0-255
+		rgb(255,255,255);白色
+		rgb(0,0,0);黑色
+		4)rgba Alpha透明度 取值范围0-1
+		5)transparent 透明
+		6)hsl 
+		hue色相 取值范围 0-360 0/360红 120绿色 240蓝色
+		s饱和度 取值范围 0-100%  越高越亮  越低越灰
+		l亮度  取值范围 0-100% 跨越黑色色相到白色色相的范围
+		7)hsla
+		8)currentcolor  当前色
+		9)inherit  继承
+
+
+		2.背景图片  background-image
+		background-image:url("");
+		多个背景图片 用逗号隔开  如果出现冲突 以前面写的生效
+
+		图片格式
+		.jpg  .png  .gif  .webp
+
+		背景层级
+		内容区>边框层>背景图片>背景颜色
+
+		3.背景图片平铺 background-repeat
+		1)repeat repeat 默认
+		2)repeat-x  水平平铺
+		3)repeat-y  竖直平铺
+		4)no-repeat 不平铺
+		5 6 ie不支持
+		5)round 背景图片自动缩放直到适应且填充整个容器
+		6)space 背景图片以相同的间距平铺且填充整个容器
+
+
+		4.背景图片大小  background-size 
+		1)像素值 
+		2个值 第一个值x轴 第二个值y轴
+		1个值 给x轴  y轴auto自动计算
+		2)百分数 (100%是相对于父级容器)
+		3)cover 图片缩放 直到充满整个容器(保持宽高比不变 4)contain 图片缩放 一个边碰到容器就停止(保持宽高比不变  )
+
+		5.背景图片位置   background-position
+		1.关键词 
+		top
+		bottom
+		left
+		right
+		center 中间
+		如果只写一个值 x轴 y轴默认是center
+		2)百分数 (100% 父级的宽高度减去背景的宽高度)
+		3)像素值 px
+
+		6.背景图片基点(起始域)  background-origin
+		1)padding-box  默认值  从内边距区域开始
+		2)border-box	从边框区域开始
+		3)content-box 从内容区域开始
+
+		7.背景图片裁剪 background-clip 
+		1)border-box 边框以外裁剪 默认值 
+		2)padding-box 内边距以外裁剪	
+		3)content-box 内容区域以外裁剪
+		4)text  文本以外裁剪
+		-webkit-background-clip:text;
+		background-clip:text;
+		color:rgba(0,0,0,0);
+
+		8.背景图片关联 background-attachment
+		规定背景图片是否固定或者是随着页面来滚动
+		1)scroll 默认  背景图片随着页面的滚动而滚动 背景图片附在容器里
+		2)fixed  固定  背景图片不随着页面的滚动而滚动 背景图片附在浏览器窗口里
+
+
+		overflow 超出区域
+		visible  显示
+		hidden 隐藏
+		scroll 滚动条
+		auto  没有超出的时候 就没有滚动条 有的时候就有
+
+		9)背景图片综合样式
+		background:red url("") no-repeat scroll  20px 20px/30px 30px;
+		颜色 图片 平铺  关联 定位/大小；
+
+		精灵图  雪碧图
+		网页图片应用处理技术 将网页中需要的小图片集成一个大图片
+
+		原因
+		1.减少浏览器的请求次数 ，避免网页的延迟
+		2.方便小图标的管理
+		-->
+	</body>
+</html>
